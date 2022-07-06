@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -32,6 +34,33 @@ android {
 }
 
 dependencies {
+    // gson
+    implementation "com.google.code.gson:gson:2.9.0"
+
+    // Retrofit2
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+
+    // timber
+    implementation "com.jakewharton.timber:timber:5.0.1"
+
+    // glide
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    kapt 'com.github.bumptech.glide:compiler:4.13.2'
+
+    // ktx
+    implementation "androidx.activity:activity-ktx:1.5.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0-alpha01"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.6.0-alpha01"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.0-alpha01"
+    implementation "androidx.fragment:fragment-ktx:1.5.0"
+
+    // coroutine
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
+
+    // hilt
+    implementation "com.google.dagger:hilt-android:2.40"
+    kapt "com.google.dagger:hilt-android-compiler:2.40"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
