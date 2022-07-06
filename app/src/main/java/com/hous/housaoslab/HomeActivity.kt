@@ -12,5 +12,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
         setContentView(binding.root)
+        binding.botNavHome.itemIconTintList = null
+        binding.botNavHome.selectedItemId = R.id.ic_bot_nav_home
     }
 }
