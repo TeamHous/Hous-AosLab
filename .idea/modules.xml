@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Hous-AosLab.iml" filepath="$PROJECT_DIR$/.idea/Hous-AosLab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HousAosLab.iml" filepath="$PROJECT_DIR$/.idea/modules/HousAosLab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HousAosLab.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HousAosLab.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HousAosLab.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HousAosLab.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HousAosLab.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HousAosLab.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HousAosLab.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HousAosLab.app.unitTest.iml" />
     </modules>
   </component>
 </project>
