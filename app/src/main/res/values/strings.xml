@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">HousAosLab</string>
+    <string name="bot_nav_home">Home</string>
+    <string name="bot_nav_rules">Rules</string>
+    <string name="bot_nav_profile">Profile</string>
 </resources>
