@@ -13,7 +13,8 @@
         <entry key="app/src/main/res/drawable/sel_bot_nav_home.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/sel_bot_nav_profile.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/sel_bot_nav_rules.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_home.xml" value="0.2159149169921875" />
+        <entry key="app/src/main/res/drawable/shape_yellow_fill_10_rectangle.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.42782152230971127" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/menu/bot_nav.xml" value="0.1" />
         <entry key="app/src/main/res/menu/bot_nav_home.xml" value="0.29375" />
