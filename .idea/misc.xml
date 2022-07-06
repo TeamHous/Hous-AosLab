@@ -6,14 +6,20 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.103" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.103" />
         <entry key="app/src/main/res/drawable/ic_white_fill_home.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_white_fill_profile.xml" value="0.1525" />
+        <entry key="app/src/main/res/drawable/ic_white_fill_rules.xml" value="0.1525" />
         <entry key="app/src/main/res/drawable/ic_white_line_home.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_white_line_profile.xml" value="0.103" />
         <entry key="app/src/main/res/drawable/ic_white_line_rules.xml" value="0.103" />
+        <entry key="app/src/main/res/drawable/ic_yellow_line_home.xml" value="0.1525" />
+        <entry key="app/src/main/res/drawable/ic_yellow_line_profile.xml" value="0.1525" />
+        <entry key="app/src/main/res/drawable/ic_yellow_line_rules.xml" value="0.1525" />
         <entry key="app/src/main/res/drawable/sel_bot_nav.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/sel_bot_nav_home.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/sel_bot_nav_profile.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/sel_bot_nav_rules.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/shape_yellow_fill_10_rectangle.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/shape_yellow_fill_30_rectangle.xml" value="0.1525" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.42782152230971127" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/menu/bot_nav.xml" value="0.1" />
