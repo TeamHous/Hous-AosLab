@@ -3,15 +3,15 @@
     <item
         android:id="@+id/menu_profile"
         android:icon="@drawable/ic_white_fill_home"
-        android:title="@string/bot_nav_home"/>
+        android:title="@string/bot_nav_home" />
 
     <item
         android:id="@+id/menu_home"
         android:icon="@drawable/ic_white_fill_rules"
-        android:title="@string/bot_nav_rules"/>
+        android:title="@string/bot_nav_rules" />
 
     <item
         android:id="@+id/menu_camera"
         android:icon="@drawable/ic_white_fill_profile"
-        android:title="@string/bot_nav_profile"/>
+        android:title="@string/bot_nav_profile" />
 </menu>
