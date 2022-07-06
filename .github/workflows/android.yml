@@ -21,14 +21,6 @@ jobs:
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
         restore-keys: |
           ${{ runner.os }}-gradle-
-    
-    - name: Ktlint
-      uses: ScaCap/action-ktlint@master
-      with:
-        github_token: ${{ secrets.github_token }}
-        reporter: github-pr-check
-        android: true
-        fail_on_error: true
         
     - name: set up JDK 11
       uses: actions/setup-java@v3
