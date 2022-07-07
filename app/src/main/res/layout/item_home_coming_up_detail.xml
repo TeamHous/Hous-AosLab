@@ -18,39 +18,38 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingEnd="6dp">
 
         <ImageView
             android:id="@+id/iv_home_coming_up_shape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="@{position == 0 ? View.GONE : View.VISIBLE}"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_home_coming_up_image"
-            app:layout_constraintEnd_toEndOf="@+id/iv_home_coming_up_image"
-            app:layout_constraintStart_toStartOf="@+id/iv_home_coming_up_image"
-            app:layout_constraintTop_toTopOf="@+id/iv_home_coming_up_image"
-            app:srcCompat="@drawable/shape_yellow_fill_16_rectangle" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/shape_yellow_fill_16_rectangle"
+            tools:src="@drawable/shape_yellow_fill_16_rectangle" />
 
         <ImageView
             android:id="@+id/iv_home_coming_up_image"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:visibility="@{position == 0 ? View.GONE : View.VISIBLE}"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
-
+            app:layout_constraintBottom_toBottomOf="@id/iv_home_coming_up_shape"
+            app:layout_constraintEnd_toEndOf="@id/iv_home_coming_up_shape"
+            app:layout_constraintStart_toStartOf="@id/iv_home_coming_up_shape"
+            app:layout_constraintTop_toTopOf="@id/iv_home_coming_up_shape"
+            app:srcCompat="@drawable/img_coming_up_party"
+            tools:src="@drawable/img_coming_up_party" />
 
         <TextView
             android:id="@+id/tv_home_coming_up_day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="D-10"
             android:textColor="@color/hous_white"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:visibility="@{position == 0 ? View.GONE : View.VISIBLE}"
+            android:visibility="@{position == 0 ? View.INVISIBLE : View.VISIBLE}"
             app:layout_constraintBottom_toBottomOf="@id/iv_home_coming_up_shape"
             app:layout_constraintEnd_toEndOf="@id/iv_home_coming_up_shape"
             app:layout_constraintStart_toStartOf="@id/iv_home_coming_up_shape"
