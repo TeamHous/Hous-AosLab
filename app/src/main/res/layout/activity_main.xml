@@ -24,12 +24,12 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/tv_main_hous"
+                android:id="@+id/tv_main"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="44dp"
-                android:text="@string/home_tool_bar_title"
+                android:text="Hous-"
                 android:textColor="@color/black"
                 android:textSize="28sp"
                 android:textStyle="bold" />

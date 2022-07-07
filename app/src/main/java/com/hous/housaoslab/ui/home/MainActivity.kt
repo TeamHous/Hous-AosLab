@@ -27,18 +27,21 @@ class MainActivity : AppCompatActivity() {
                     binding.botNavMain.background = ContextCompat.getDrawable(this, R.drawable.shape_yellow_fill_30_rectangle)
                     binding.botNavMain.itemTextColor = ContextCompat.getColorStateList(this, R.color.sel_bot_nav_home_color)
                     binding.botNavMain.itemIconTintList = ContextCompat.getColorStateList(this, R.color.sel_bot_nav_home_color)
+                    binding.tvMain.text = "Hous-"
                     true
                 }
                 R.id.ic_bot_nav_rules -> {
                     binding.botNavMain.background = ContextCompat.getDrawable(this, R.drawable.shape_blue_fill_30_rectangle)
                     binding.botNavMain.itemTextColor = ContextCompat.getColorStateList(this, R.color.sel_bot_nav_rules_color)
                     binding.botNavMain.itemIconTintList = ContextCompat.getColorStateList(this, R.color.sel_bot_nav_rules_color)
+                    binding.tvMain.text = "Hous- 규칙"
                     true
                 }
                 else -> {
                     binding.botNavMain.background = ContextCompat.getDrawable(this, R.drawable.shape_red_fill_30_rectangle)
                     binding.botNavMain.itemTextColor = ContextCompat.getColorStateList(this, R.color.sel_bot_nav_profile_color)
                     binding.botNavMain.itemIconTintList = ContextCompat.getColorStateList(this, R.color.sel_bot_nav_profile_color)
+                    binding.tvMain.text = "Hous- ME"
                     true
                 }
             }
