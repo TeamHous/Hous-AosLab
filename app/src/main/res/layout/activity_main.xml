@@ -35,12 +35,11 @@
                 android:textStyle="bold" />
         </androidx.appcompat.widget.Toolbar>
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/vp_main"
-            android:layout_width="match_parent"
+        <FrameLayout
+            android:id="@+id/fl_main"
+            android:layout_width="0dp"
             android:layout_height="0dp"
-            android:overScrollMode="never"
-            app:layout_constraintBottom_toTopOf="@id/bot_nav_main"
+            app:layout_constraintBottom_toTopOf="@+id/bot_nav_main"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tb_main" />
