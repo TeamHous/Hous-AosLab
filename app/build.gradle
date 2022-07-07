@@ -6,6 +6,15 @@ plugins {
 }
 
 android {
+    lintOptions {
+        abortOnError false
+    }
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
+
     compileSdk 32
 
     defaultConfig {
