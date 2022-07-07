@@ -7,4 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--    hous color-->
+    <color name="hous_white">#FFFFFF</color>
+    <color name="hous_yellow">#FFD66D</color>
+    <color name="hous_red">#FF6666</color>
+    <color name="hous_blue">#5E9EFF</color>
+    <color name="hous_purple">#D99CFF</color>
+    <!-- hous background-->
+    <color name="hous_yellow_bg">#FFF8E6</color>
 </resources>
