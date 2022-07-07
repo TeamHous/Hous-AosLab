@@ -7,13 +7,13 @@
 
         <variable
             name="activity"
-            type="com.hous.housaoslab.HomeActivity" />
+            type="com.hous.housaoslab.ui.home.HomeActivity" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".HomeActivity">
+        tools:context=".ui.home.HomeActivity">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/tb_home"
