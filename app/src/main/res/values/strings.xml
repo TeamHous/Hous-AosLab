@@ -4,6 +4,7 @@
     <string name="bot_nav_home">Home</string>
     <string name="bot_nav_rules">Rules</string>
     <string name="bot_nav_profile">Profile</string>
+    <string name="home_tool_bar_title">Hous-</string>
 
     <!--    home-fragment-event-dialog -->
     <string name="home_event_event">이벤트</string>
