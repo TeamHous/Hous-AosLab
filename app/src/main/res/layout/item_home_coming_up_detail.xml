@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="comingUpData"
+            type="com.hous.housaoslab.ui.home.model.ComingUpData" />
+
+        <variable
+            name="position"
+            type="Integer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_home_coming_up_shape"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:visibility="@{position == 0 ? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_home_coming_up_image"
+            app:layout_constraintEnd_toEndOf="@+id/iv_home_coming_up_image"
+            app:layout_constraintStart_toStartOf="@+id/iv_home_coming_up_image"
+            app:layout_constraintTop_toTopOf="@+id/iv_home_coming_up_image"
+            app:srcCompat="@drawable/shape_yellow_fill_16_rectangle" />
+
+        <ImageView
+            android:id="@+id/iv_home_coming_up_image"
+            setCircleImageWithUrl="@{comingUpData.image}"
+            tools:srcCompat="@tools:sample/avatars"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="33dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_home_coming_up_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/iv_home_coming_up_shape"
+            app:layout_constraintStart_toStartOf="@id/iv_home_coming_up_shape"
+            app:layout_constraintEnd_toEndOf="@id/iv_home_coming_up_shape"
+            app:layout_constraintBottom_toBottomOf="@id/iv_home_coming_up_shape"
+            tools:text="D-10"
+            android:textSize="20sp"
+            android:textColor="@color/hous_white"
+            android:textStyle="bold"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
