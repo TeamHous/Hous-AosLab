@@ -33,14 +33,14 @@
 
         <ImageView
             android:id="@+id/iv_home_coming_up_image"
-            setCircleImageWithUrl="@{comingUpData.image}"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
+            android:visibility="@{position == 0 ? View.GONE : View.VISIBLE}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:src="@tools:sample/avatars" />
 
 
         <TextView
@@ -50,6 +50,7 @@
             android:textColor="@color/hous_white"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:visibility="@{position == 0 ? View.GONE : View.VISIBLE}"
             app:layout_constraintBottom_toBottomOf="@id/iv_home_coming_up_shape"
             app:layout_constraintEnd_toEndOf="@id/iv_home_coming_up_shape"
             app:layout_constraintStart_toStartOf="@id/iv_home_coming_up_shape"
