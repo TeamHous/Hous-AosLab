@@ -5,15 +5,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import com.hous.housaoslab.R
-import com.hous.housaoslab.databinding.ActivityHomeBinding
+import com.hous.housaoslab.databinding.ActivityMainBinding
 
-class HomeActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityHomeBinding
+class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         setContentView(binding.root)
+
+        initBotNav()
+    }
+
+    private fun initBotNav() {
         binding.botNavHome.selectedItemId = R.id.ic_bot_nav_home
 
         binding.botNavHome.setOnItemSelectedListener {
