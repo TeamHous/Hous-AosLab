@@ -19,26 +19,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initBotNav() {
-        binding.botNavHome.selectedItemId = R.id.ic_bot_nav_home
+        binding.botNavMain.selectedItemId = R.id.ic_bot_nav_home
 
-        binding.botNavHome.setOnItemSelectedListener {
+        binding.botNavMain.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.ic_bot_nav_home -> {
-                    binding.botNavHome.background = ContextCompat.getDrawable(this, R.drawable.shape_yellow_fill_30_rectangle)
-                    binding.botNavHome.itemTextColor = ContextCompat.getColorStateList(this, R.color.sel_bot_nav_home_color)
-                    binding.botNavHome.itemIconTintList = ContextCompat.getColorStateList(this, R.color.sel_bot_nav_home_color)
+                    binding.botNavMain.background = ContextCompat.getDrawable(this, R.drawable.shape_yellow_fill_30_rectangle)
+                    binding.botNavMain.itemTextColor = ContextCompat.getColorStateList(this, R.color.sel_bot_nav_home_color)
+                    binding.botNavMain.itemIconTintList = ContextCompat.getColorStateList(this, R.color.sel_bot_nav_home_color)
                     true
                 }
                 R.id.ic_bot_nav_rules -> {
-                    binding.botNavHome.background = ContextCompat.getDrawable(this, R.drawable.shape_blue_fill_30_rectangle)
-                    binding.botNavHome.itemTextColor = ContextCompat.getColorStateList(this, R.color.sel_bot_nav_rules_color)
-                    binding.botNavHome.itemIconTintList = ContextCompat.getColorStateList(this, R.color.sel_bot_nav_rules_color)
+                    binding.botNavMain.background = ContextCompat.getDrawable(this, R.drawable.shape_blue_fill_30_rectangle)
+                    binding.botNavMain.itemTextColor = ContextCompat.getColorStateList(this, R.color.sel_bot_nav_rules_color)
+                    binding.botNavMain.itemIconTintList = ContextCompat.getColorStateList(this, R.color.sel_bot_nav_rules_color)
                     true
                 }
                 else -> {
-                    binding.botNavHome.background = ContextCompat.getDrawable(this, R.drawable.shape_red_fill_30_rectangle)
-                    binding.botNavHome.itemTextColor = ContextCompat.getColorStateList(this, R.color.sel_bot_nav_profile_color)
-                    binding.botNavHome.itemIconTintList = ContextCompat.getColorStateList(this, R.color.sel_bot_nav_profile_color)
+                    binding.botNavMain.background = ContextCompat.getDrawable(this, R.drawable.shape_red_fill_30_rectangle)
+                    binding.botNavMain.itemTextColor = ContextCompat.getColorStateList(this, R.color.sel_bot_nav_profile_color)
+                    binding.botNavMain.itemIconTintList = ContextCompat.getColorStateList(this, R.color.sel_bot_nav_profile_color)
                     true
                 }
             }
