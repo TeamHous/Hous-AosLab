@@ -1,4 +1,4 @@
-package com.hous.housaoslab
+package com.hous.housaoslab.event
 
 import android.content.Context
 import android.graphics.Color

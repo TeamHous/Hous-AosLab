@@ -1,17 +1,17 @@
-package com.hous.housaoslab
+package com.hous.housaoslab.event
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
-import com.hous.housaoslab.databinding.ActivityMainBinding
+import com.hous.housaoslab.databinding.ActivityExampleBinding
 import com.hous.housaoslab.util.showToast
 
-class MainActivity : AppCompatActivity(), EventDialogFragment.MyCustomFragmentListener {
+class ExampleActivity : AppCompatActivity(), EventDialogFragment.MyCustomFragmentListener {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityExampleBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityExampleBinding.inflate(layoutInflater)
         onClickDialogButton()
         setContentView(binding.root)
     }
