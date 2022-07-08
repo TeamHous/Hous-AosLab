@@ -16,4 +16,5 @@
     <color name="hous_purple">#D99CFF</color>
     <!-- hous background-->
     <color name="hous_yellow_bg">#FFF8E6</color>
+    <color name="hous_blue_bg">#EFF5FF</color>
 </resources>

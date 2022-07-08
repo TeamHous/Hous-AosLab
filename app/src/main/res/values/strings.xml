@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">HousAosLab</string>
 
+    <string name="bot_nav_home">Home</string>
+    <string name="bot_nav_rules">Rules</string>
+    <string name="bot_nav_profile">Profile</string>
+    <string name="home_coming_up">Coming up-</string>
+    <string name="home_rules">Rules</string>
+    <string name="home_to_do">To-Do</string>
+    <string name="home_homie_profile">Homie Profile-</string>
+
     <!--    home-fragment-event-dialog -->
     <string name="home_event_event">이벤트</string>
     <string name="home_event_delete">삭제</string>
