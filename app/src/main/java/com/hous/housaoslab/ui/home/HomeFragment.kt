@@ -7,16 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.hous.housaoslab.R
 import com.hous.housaoslab.databinding.FragmentHomeBinding
-import com.hous.housaoslab.ui.home.model.ComingUpAdapter
-import com.hous.housaoslab.ui.home.model.ComingUpData
-import com.hous.housaoslab.ui.home.model.RulesAdapter
-import com.hous.housaoslab.ui.home.model.RulesData
+import com.hous.housaoslab.ui.home.model.*
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     val binding get() = _binding!!
     private lateinit var comingUpAdapter: ComingUpAdapter
     private lateinit var rulesAdapter: RulesAdapter
+    private lateinit var toDoAdapter: ToDoAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
@@ -58,6 +56,20 @@ class HomeFragment : Fragment() {
                 RulesData("세탁기는 화,수,토"),
                 RulesData("일 - 청소하는 날!"),
                 RulesData("2,4주 토- 장보기"),
+            )
+        )
+        comingUpAdapter.notifyDataSetChanged()
+
+        toDoAdapter = ToDoAdapter()
+        binding.rvHomeToDo.adapter = toDoAdapter
+
+        rulesAdapter.rulesList.addAll(
+            listOf(
+                RulesData("퇴근하고 마트"),
+                RulesData("저녁 설거지"),
+                RulesData("아침 설거지"),
+                RulesData("물 사기"),
+                RulesData("야식 먹지 말자"),
             )
         )
         comingUpAdapter.notifyDataSetChanged()
