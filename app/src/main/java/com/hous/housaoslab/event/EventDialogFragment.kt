@@ -8,27 +8,31 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
+import com.hous.housaoslab.R
 import com.hous.housaoslab.databinding.FragmentDialogEventBinding
 
 class EventDialogFragment : DialogFragment() {
     private var _binding: FragmentDialogEventBinding? = null
     private val binding get() = _binding ?: error("null값 들어감")
-    internal lateinit var customFragmentListener: MyCustomFragmentListener
+    private lateinit var customFragmentListener: MyCustomFragmentListener
+    private lateinit var currentCheckedIcon: EventIcon
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.d(TAG, "MyCustomFragment - onCreateView() called")
-        _binding = FragmentDialogEventBinding.inflate(inflater, container, false)
+        _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_dialog_event, container, false)
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.d(TAG, "MyCustomFragment - onViewCreated() called")
         initDialog()
+        onClickEvents()
         close()
         delete()
         save()
@@ -50,7 +54,6 @@ class EventDialogFragment : DialogFragment() {
     }
 
     private fun initDialog() {
-        Log.d(TAG, "MyCustomFragment - initDialog() called")
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         isCancelable = false
     }
@@ -70,6 +73,56 @@ class EventDialogFragment : DialogFragment() {
     private fun save() {
         binding.btnSave.setOnClickListener {
             customFragmentListener.onClickSaveButton(this)
+        }
+    }
+
+    private fun onClickEvents() {
+        initSelectedImage()
+
+        binding.ivEventOne.setOnClickListener {
+            if (binding.ivEventOne.isSelected) return@setOnClickListener
+            changeCurrentCheckedIcon()
+            binding.ivEventOne.isSelected = true
+            currentCheckedIcon = EventIcon.FIRST
+            binding.ivTitle.setImageResource(currentCheckedIcon.drawableRes)
+        }
+        binding.ivEventTwo.setOnClickListener {
+            if (binding.ivEventTwo.isSelected) return@setOnClickListener
+            changeCurrentCheckedIcon()
+            binding.ivEventTwo.isSelected = true
+            currentCheckedIcon = EventIcon.SECOND
+            binding.ivTitle.setImageResource(currentCheckedIcon.drawableRes)
+        }
+
+        binding.ivEventThree.setOnClickListener {
+            if (binding.ivEventThree.isSelected) return@setOnClickListener
+            changeCurrentCheckedIcon()
+            binding.ivEventThree.isSelected = true
+            currentCheckedIcon = EventIcon.THIRD
+            binding.ivTitle.setImageResource(currentCheckedIcon.drawableRes)
+        }
+
+        binding.ivEventFour.setOnClickListener {
+            if (binding.ivEventFour.isSelected) return@setOnClickListener
+            changeCurrentCheckedIcon()
+            binding.ivEventFour.isSelected = true
+            currentCheckedIcon = EventIcon.FOURTH
+            binding.ivTitle.setImageResource(currentCheckedIcon.drawableRes)
+        }
+    }
+
+    private fun initSelectedImage() {
+        currentCheckedIcon = EventIcon.FIRST
+        binding.ivEventOne.isSelected = true
+        binding.ivTitle.setImageResource(currentCheckedIcon.drawableRes)
+    }
+
+    private fun changeCurrentCheckedIcon() {
+        when (currentCheckedIcon) {
+            EventIcon.FIRST -> binding.ivEventOne.isSelected = false
+            EventIcon.SECOND -> binding.ivEventTwo.isSelected = false
+            EventIcon.THIRD -> binding.ivEventThree.isSelected = false
+            EventIcon.FOURTH -> binding.ivEventFour.isSelected = false
         }
     }
 
