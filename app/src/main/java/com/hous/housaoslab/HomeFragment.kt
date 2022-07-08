@@ -31,15 +31,15 @@ class HomeFragment : Fragment() {
 
         comingUpAdapter.comingUpList.addAll(
             listOf(
-                ComingUpData(R.drawable.shape_yellow_bg_fill_16_rectangle, R.drawable.img_coming_up_plus, "D-10"),
-                ComingUpData(R.drawable.shape_yellow_fill_16_rectangle, R.drawable.img_coming_up_party, "D-10"),
-                ComingUpData(R.drawable.shape_yellow_fill_16_rectangle, R.drawable.img_coming_up_party, "D-9"),
-                ComingUpData(R.drawable.shape_yellow_fill_16_rectangle, R.drawable.img_coming_up_party, "D-8"),
-                ComingUpData(R.drawable.shape_yellow_fill_16_rectangle, R.drawable.img_coming_up_party, "D-1"),
+                ComingUpData(R.drawable.shape_yellow_bg_fill_16_rectangle, R.drawable.img_coming_up_plus, "D-1"),
                 ComingUpData(R.drawable.shape_yellow_fill_16_rectangle, R.drawable.img_coming_up_party, "D-4"),
+                ComingUpData(R.drawable.shape_yellow_fill_16_rectangle, R.drawable.img_coming_up_party, "D-6"),
+                ComingUpData(R.drawable.shape_yellow_fill_16_rectangle, R.drawable.img_coming_up_party, "D-10"),
+                ComingUpData(R.drawable.shape_yellow_fill_16_rectangle, R.drawable.img_coming_up_party, "D-15"),
+                ComingUpData(R.drawable.shape_yellow_fill_16_rectangle, R.drawable.img_coming_up_party, "D-18"),
+                ComingUpData(R.drawable.shape_yellow_fill_16_rectangle, R.drawable.img_coming_up_party, "D-20"),
                 ComingUpData(R.drawable.shape_yellow_fill_16_rectangle, R.drawable.img_coming_up_party, "D-25"),
-                ComingUpData(R.drawable.shape_yellow_fill_16_rectangle, R.drawable.img_coming_up_party, "D-14"),
-                ComingUpData(R.drawable.shape_yellow_fill_16_rectangle, R.drawable.img_coming_up_party, "D-25"),
+                ComingUpData(R.drawable.shape_yellow_fill_16_rectangle, R.drawable.img_coming_up_party, "D-80"),
             )
         )
         comingUpAdapter.notifyDataSetChanged()
