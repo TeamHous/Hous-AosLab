@@ -30,7 +30,6 @@ class HomeFragment : Fragment() {
     private fun initAdapter() {
         comingUpAdapter = ComingUpAdapter()
         binding.rvHomeComingUp.adapter = comingUpAdapter
-
         comingUpAdapter.comingUpList.addAll(
             listOf(
                 ComingUpData(R.drawable.shape_yellow_bg_fill_16_rectangle, R.drawable.img_coming_up_plus, "D-1"),
@@ -48,7 +47,6 @@ class HomeFragment : Fragment() {
 
         rulesAdapter = RulesAdapter()
         binding.rvHomeRules.adapter = rulesAdapter
-
         rulesAdapter.rulesList.addAll(
             listOf(
                 RulesData("00시~ 불 끄기!"),
@@ -62,7 +60,7 @@ class HomeFragment : Fragment() {
 
         toDoAdapter = ToDoAdapter()
         binding.rvHomeToDo.adapter = toDoAdapter
-
+        toDoAdapter.toDoList.addAll(
         rulesAdapter.rulesList.addAll(
             listOf(
                 RulesData("퇴근하고 마트"),
