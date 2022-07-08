@@ -1,4 +1,4 @@
-package com.hous.housaoslab.event
+package com.hous.housaoslab.ui.home.event
 
 import android.content.Context
 import android.graphics.Color
@@ -81,14 +81,14 @@ class EventDialogFragment : DialogFragment() {
 
         binding.ivEventOne.setOnClickListener {
             if (binding.ivEventOne.isSelected) return@setOnClickListener
-            changeCurrentCheckedIcon()
+            changeSelectedState()
             binding.ivEventOne.isSelected = true
             currentCheckedIcon = EventIcon.FIRST
             binding.ivTitle.setImageResource(currentCheckedIcon.drawableRes)
         }
         binding.ivEventTwo.setOnClickListener {
             if (binding.ivEventTwo.isSelected) return@setOnClickListener
-            changeCurrentCheckedIcon()
+            changeSelectedState()
             binding.ivEventTwo.isSelected = true
             currentCheckedIcon = EventIcon.SECOND
             binding.ivTitle.setImageResource(currentCheckedIcon.drawableRes)
@@ -96,7 +96,7 @@ class EventDialogFragment : DialogFragment() {
 
         binding.ivEventThree.setOnClickListener {
             if (binding.ivEventThree.isSelected) return@setOnClickListener
-            changeCurrentCheckedIcon()
+            changeSelectedState()
             binding.ivEventThree.isSelected = true
             currentCheckedIcon = EventIcon.THIRD
             binding.ivTitle.setImageResource(currentCheckedIcon.drawableRes)
@@ -104,7 +104,7 @@ class EventDialogFragment : DialogFragment() {
 
         binding.ivEventFour.setOnClickListener {
             if (binding.ivEventFour.isSelected) return@setOnClickListener
-            changeCurrentCheckedIcon()
+            changeSelectedState()
             binding.ivEventFour.isSelected = true
             currentCheckedIcon = EventIcon.FOURTH
             binding.ivTitle.setImageResource(currentCheckedIcon.drawableRes)
@@ -117,7 +117,7 @@ class EventDialogFragment : DialogFragment() {
         binding.ivTitle.setImageResource(currentCheckedIcon.drawableRes)
     }
 
-    private fun changeCurrentCheckedIcon() {
+    private fun changeSelectedState() {
         when (currentCheckedIcon) {
             EventIcon.FIRST -> binding.ivEventOne.isSelected = false
             EventIcon.SECOND -> binding.ivEventTwo.isSelected = false
