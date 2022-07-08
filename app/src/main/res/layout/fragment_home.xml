@@ -56,7 +56,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_home_rules"
-            android:layout_width="165dp"
+            android:layout_width="170dp"
             android:layout_height="172dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/shape_blue_bg_fill_16_rectangle"
@@ -69,6 +69,35 @@
             app:layout_constraintStart_toStartOf="@id/tv_home_rules"
             app:layout_constraintTop_toBottomOf="@id/tv_home_rules"
             tools:listitem="@layout/item_home_rules" />
+
+        <TextView
+            android:id="@+id/tv_home_to_do"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/home_to_do"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/rv_home_to_do"
+            app:layout_constraintTop_toBottomOf="@id/rv_home_coming_up" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_home_to_do"
+            android:layout_width="170dp"
+            android:layout_height="172dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/shape_blue_bg_fill_16_rectangle"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="20dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_home_to_do"
+            tools:listitem="@layout/item_home_to_do" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
