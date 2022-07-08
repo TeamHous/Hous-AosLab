@@ -32,6 +32,3 @@ class ToDoAdapter : RecyclerView.Adapter<ToDoAdapter.ToDoViewHolder>() {
         }
     }
 }
-
-{
-}
