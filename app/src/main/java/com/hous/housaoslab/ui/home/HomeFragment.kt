@@ -61,13 +61,12 @@ class HomeFragment : Fragment() {
         toDoAdapter = ToDoAdapter()
         binding.rvHomeToDo.adapter = toDoAdapter
         toDoAdapter.toDoList.addAll(
-        rulesAdapter.rulesList.addAll(
             listOf(
-                RulesData("퇴근하고 마트"),
-                RulesData("저녁 설거지"),
-                RulesData("아침 설거지"),
-                RulesData("물 사기"),
-                RulesData("야식 먹지 말자"),
+                ToDoData("퇴근하고 마트"),
+                ToDoData("저녁 설거지"),
+                ToDoData("아침 설거지"),
+                ToDoData("물 사기"),
+                ToDoData("야식 먹지 말자"),
             )
         )
         comingUpAdapter.notifyDataSetChanged()
