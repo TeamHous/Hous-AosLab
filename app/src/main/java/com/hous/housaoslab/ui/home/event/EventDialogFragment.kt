@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.viewModels
 import com.hous.housaoslab.R
 import com.hous.housaoslab.databinding.FragmentDialogEventBinding
 
@@ -17,7 +18,7 @@ class EventDialogFragment : DialogFragment() {
     private var _binding: FragmentDialogEventBinding? = null
     private val binding get() = _binding ?: error("null값 들어감")
     private lateinit var customFragmentListener: MyCustomFragmentListener
-    private lateinit var currentCheckedIcon: EventIcon
+    private val eventViewModel: EventViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,14 +26,14 @@ class EventDialogFragment : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_dialog_event, container, false)
-
+        binding.viewmodel = eventViewModel
+        binding.lifecycleOwner = this@EventDialogFragment
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initDialog()
-        onClickEvents()
         close()
         delete()
         save()
@@ -44,7 +45,7 @@ class EventDialogFragment : DialogFragment() {
         try {
             customFragmentListener = context as MyCustomFragmentListener
         } catch (e: ClassCastException) {
-            Log.e(TAG, "onAttach: $context must implement MyCustomFragmentListener")
+            Log.e("error", "onAttach: $context must implement MyCustomFragmentListener")
         }
     }
 
@@ -74,60 +75,6 @@ class EventDialogFragment : DialogFragment() {
         binding.btnSave.setOnClickListener {
             customFragmentListener.onClickSaveButton(this)
         }
-    }
-
-    private fun onClickEvents() {
-        initSelectedImage()
-
-        binding.ivEventOne.setOnClickListener {
-            if (binding.ivEventOne.isSelected) return@setOnClickListener
-            changeSelectedState()
-            binding.ivEventOne.isSelected = true
-            currentCheckedIcon = EventIcon.FIRST
-            binding.ivTitle.setImageResource(currentCheckedIcon.drawableRes)
-        }
-        binding.ivEventTwo.setOnClickListener {
-            if (binding.ivEventTwo.isSelected) return@setOnClickListener
-            changeSelectedState()
-            binding.ivEventTwo.isSelected = true
-            currentCheckedIcon = EventIcon.SECOND
-            binding.ivTitle.setImageResource(currentCheckedIcon.drawableRes)
-        }
-
-        binding.ivEventThree.setOnClickListener {
-            if (binding.ivEventThree.isSelected) return@setOnClickListener
-            changeSelectedState()
-            binding.ivEventThree.isSelected = true
-            currentCheckedIcon = EventIcon.THIRD
-            binding.ivTitle.setImageResource(currentCheckedIcon.drawableRes)
-        }
-
-        binding.ivEventFour.setOnClickListener {
-            if (binding.ivEventFour.isSelected) return@setOnClickListener
-            changeSelectedState()
-            binding.ivEventFour.isSelected = true
-            currentCheckedIcon = EventIcon.FOURTH
-            binding.ivTitle.setImageResource(currentCheckedIcon.drawableRes)
-        }
-    }
-
-    private fun initSelectedImage() {
-        currentCheckedIcon = EventIcon.FIRST
-        binding.ivEventOne.isSelected = true
-        binding.ivTitle.setImageResource(currentCheckedIcon.drawableRes)
-    }
-
-    private fun changeSelectedState() {
-        when (currentCheckedIcon) {
-            EventIcon.FIRST -> binding.ivEventOne.isSelected = false
-            EventIcon.SECOND -> binding.ivEventTwo.isSelected = false
-            EventIcon.THIRD -> binding.ivEventThree.isSelected = false
-            EventIcon.FOURTH -> binding.ivEventFour.isSelected = false
-        }
-    }
-
-    companion object {
-        private const val TAG = "로그"
     }
 
     interface MyCustomFragmentListener {

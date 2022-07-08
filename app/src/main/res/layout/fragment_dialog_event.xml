@@ -5,6 +5,11 @@
 
     <data>
 
+        <import type="com.hous.housaoslab.ui.home.event.EventIcon" />
+
+        <variable
+            name="viewmodel"
+            type="com.hous.housaoslab.ui.home.event.EventViewModel" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -49,6 +54,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginTop="17dp"
+                app:imageRes="@{viewmodel.selectedEvent.drawableRes}"
                 app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintStart_toStartOf="@id/tv_dialog"
                 app:layout_constraintTop_toBottomOf="@id/tv_dialog"
@@ -89,7 +95,9 @@
                     android:layout_height="0dp"
                     android:layout_marginStart="26dp"
                     android:layout_marginEnd="16dp"
-                    android:src="@drawable/sel_item_event_dialog"
+                    android:onClick="@{()-> viewmodel.changeSelectedEvent(EventIcon.FIRST)}"
+                    android:src="@drawable/sel_item_event_party"
+                    app:isSelected="@{viewmodel.selectedEvent == EventIcon.FIRST}"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@+id/iv_event_two"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -101,7 +109,9 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginEnd="16dp"
-                    android:src="@drawable/sel_item_event_dialog"
+                    android:onClick="@{()-> viewmodel.changeSelectedEvent(EventIcon.SECOND)}"
+                    android:src="@drawable/sel_item_event_pancake"
+                    app:isSelected="@{viewmodel.selectedEvent == EventIcon.SECOND}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@+id/iv_event_three"
@@ -114,7 +124,9 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginEnd="16dp"
-                    android:src="@drawable/sel_item_event_dialog"
+                    android:onClick="@{()-> viewmodel.changeSelectedEvent(EventIcon.THIRD)}"
+                    android:src="@drawable/sel_item_event_party"
+                    app:isSelected="@{viewmodel.selectedEvent == EventIcon.THIRD}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toStartOf="@+id/iv_event_four"
@@ -127,7 +139,9 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginEnd="24dp"
-                    android:src="@drawable/sel_item_event_dialog"
+                    android:onClick="@{()-> viewmodel.changeSelectedEvent(EventIcon.FOURTH)}"
+                    android:src="@drawable/sel_item_event_party"
+                    app:isSelected="@{viewmodel.selectedEvent == EventIcon.FOURTH}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toEndOf="parent"
