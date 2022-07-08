@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
-import com.hous.housaoslab.HomeFragment
 import com.hous.housaoslab.R
 import com.hous.housaoslab.databinding.ActivityMainBinding
 

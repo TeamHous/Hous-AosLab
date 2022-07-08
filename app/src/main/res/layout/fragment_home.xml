@@ -7,13 +7,13 @@
 
         <variable
             name="viewModel"
-            type="com.hous.housaoslab.HomeFragment" />
+            type="com.hous.housaoslab.ui.home.HomeFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".HomeFragment">
+        tools:context=".ui.home.HomeFragment">
 
         <TextView
             android:id="@+id/tv_home_coming_up"
