@@ -1,4 +1,4 @@
-package com.hous.housaoslab.event
+package com.hous.housaoslab.ui.home.event
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -1,4 +1,4 @@
-package com.hous.housaoslab.event
+package com.hous.housaoslab.ui.home.event
 
 import com.hous.housaoslab.R
 

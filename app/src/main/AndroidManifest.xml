@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".event.ExampleActivity"
+            android:name="com.hous.housaoslab.ui.home.event.ExampleActivity"
             android:exported="true" />
     </application>
 
