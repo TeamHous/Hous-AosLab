@@ -3,14 +3,14 @@ package com.hous.housaoslab.ui.home.model
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.hous.housaoslab.databinding.ItemHomeComingUpDetailBinding
+import com.hous.housaoslab.databinding.ItemHomeComingUpBinding
 
 class ComingUpAdapter : RecyclerView.Adapter<ComingUpAdapter.ComingUpViewHolder>() {
     val comingUpList = mutableListOf<ComingUpData>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ComingUpViewHolder {
         val binding =
-            ItemHomeComingUpDetailBinding.inflate(
+            ItemHomeComingUpBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
@@ -25,7 +25,7 @@ class ComingUpAdapter : RecyclerView.Adapter<ComingUpAdapter.ComingUpViewHolder>
     override fun getItemCount(): Int = comingUpList.size
 
     class ComingUpViewHolder(
-        private val binding: ItemHomeComingUpDetailBinding
+        private val binding: ItemHomeComingUpBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun onBind(data: ComingUpData) {
             binding.ivHomeComingUpShape.setImageResource(data.shape)
