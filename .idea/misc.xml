@@ -22,8 +22,12 @@
         <entry key="app/src/main/res/layout/activity_example.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.16296296296296298" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_dialog_event.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_dialog_event.xml" value="0.170428466796875" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/fragment_rules.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/item_home_coming_up.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/item_home_event_participant.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/item_home_rules.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/item_rule_event_participant.xml" value="0.29375" />
         <entry key="app/src/main/res/layout/item_rules_event_participant.xml" value="1.0523208618164064" />
       </map>
