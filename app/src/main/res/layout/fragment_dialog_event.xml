@@ -1,275 +1,297 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cd_dialog"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:cardCornerRadius="20dp"
-    tools:strokeColor="@color/black"
-    tools:strokeWidth="3">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <data>
+
+        <import type="com.hous.housaoslab.ui.home.event.EventIcon" />
+
+        <variable
+            name="viewmodel"
+            type="com.hous.housaoslab.ui.home.event.EventViewModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cd_dialog"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/iv_close"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:src="@drawable/iv_dialog_close"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tv_dialog"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginEnd="204dp"
-            android:text="@string/home_event_event"
-            android:textColor="?android:attr/textColorPrimary"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/iv_title"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="17dp"
-            app:layout_constraintDimensionRatio="1:1"
-            app:layout_constraintStart_toStartOf="@id/tv_dialog"
-            app:layout_constraintTop_toBottomOf="@id/tv_dialog"
-            app:layout_constraintWidth_percent="0.17"
-            tools:src="@drawable/ic_3d_example" />
-
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="26dp"
-            android:layout_marginEnd="24dp"
-            android:background="@drawable/shape_basic_fill_10_rectangle"
-            android:backgroundTint="@color/hous_yellow_bg"
-            android:maxLines="12"
-            android:paddingLeft="12dp"
-            android:paddingTop="9dp"
-            android:paddingBottom="7dp"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/iv_title"
-            app:layout_constraintTop_toBottomOf="@id/tv_dialog"
-            tools:text="다영언니 생파" />
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        tools:strokeColor="@color/black"
+        tools:strokeWidth="3">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cl_events"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/iv_title">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/iv_event_one"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="26dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_3d_example"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintEnd_toStartOf="@+id/iv_event_two"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/cl_events" />
-
-            <ImageView
-                android:id="@+id/iv_event_two"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_3d_example"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintEnd_toStartOf="@+id/iv_event_three"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/iv_event_one"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/iv_event_three"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_3d_example"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintEnd_toStartOf="@+id/iv_event_four"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/iv_event_two"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/iv_event_four"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginEnd="24dp"
-                android:src="@drawable/ic_3d_example"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="1:1"
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_dialog_close"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/iv_event_three"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cl_dates"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cl_events">
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tv_num_year"
+                android:id="@+id/tv_dialog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:background="@drawable/shape_basic_fill_10_rectangle"
-                android:backgroundTint="@color/hous_yellow_bg"
-                android:paddingHorizontal="14dp"
-                android:paddingVertical="7dp"
-                android:textSize="15sp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="204dp"
+                android:text="@string/home_event_event"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="2022" />
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_year"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:text="@string/home_event_year"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@id/tv_num_year"
-                app:layout_constraintStart_toEndOf="@id/tv_num_year"
-                app:layout_constraintTop_toTopOf="@id/tv_num_year" />
+            <ImageView
+                android:id="@+id/iv_title"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="17dp"
+                app:imageRes="@{viewmodel.selectedEvent.drawableRes}"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="@id/tv_dialog"
+                app:layout_constraintTop_toBottomOf="@id/tv_dialog"
+                app:layout_constraintWidth_percent="0.17"
+                tools:src="@drawable/ic_3d_example" />
 
-            <TextView
-                android:id="@+id/tv_num_month"
-                android:layout_width="wrap_content"
+            <EditText
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="24dp"
                 android:background="@drawable/shape_basic_fill_10_rectangle"
                 android:backgroundTint="@color/hous_yellow_bg"
-                android:paddingHorizontal="12dp"
-                android:paddingVertical="7dp"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@id/tv_year"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="05" />
+                android:maxLength="10"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="7dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_dialog"
+                tools:text="다영언니 생파" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_events"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_title">
+
+                <ImageView
+                    android:id="@+id/iv_event_one"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginEnd="16dp"
+                    android:onClick="@{()-> viewmodel.changeSelectedEvent(EventIcon.FIRST)}"
+                    android:src="@drawable/sel_item_event_party"
+                    app:isSelected="@{viewmodel.selectedEvent == EventIcon.FIRST}"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_event_two"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/cl_events" />
+
+                <ImageView
+                    android:id="@+id/iv_event_two"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="16dp"
+                    android:onClick="@{()-> viewmodel.changeSelectedEvent(EventIcon.SECOND)}"
+                    android:src="@drawable/sel_item_event_pancake"
+                    app:isSelected="@{viewmodel.selectedEvent == EventIcon.SECOND}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_event_three"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/iv_event_one"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_event_three"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="16dp"
+                    android:onClick="@{()-> viewmodel.changeSelectedEvent(EventIcon.THIRD)}"
+                    android:src="@drawable/sel_item_event_party"
+                    app:isSelected="@{viewmodel.selectedEvent == EventIcon.THIRD}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_event_four"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/iv_event_two"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_event_four"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="24dp"
+                    android:onClick="@{()-> viewmodel.changeSelectedEvent(EventIcon.FOURTH)}"
+                    android:src="@drawable/sel_item_event_party"
+                    app:isSelected="@{viewmodel.selectedEvent == EventIcon.FOURTH}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/iv_event_three"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_dates"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_events">
+
+                <TextView
+                    android:id="@+id/tv_num_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/shape_basic_fill_10_rectangle"
+                    android:backgroundTint="@color/hous_yellow_bg"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="7dp"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="2022" />
+
+                <TextView
+                    android:id="@+id/tv_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/home_event_year"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_num_year"
+                    app:layout_constraintStart_toEndOf="@id/tv_num_year"
+                    app:layout_constraintTop_toTopOf="@id/tv_num_year" />
+
+                <TextView
+                    android:id="@+id/tv_num_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/shape_basic_fill_10_rectangle"
+                    android:backgroundTint="@color/hous_yellow_bg"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="7dp"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toEndOf="@id/tv_year"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="05" />
+
+                <TextView
+                    android:id="@+id/tv_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/home_event_month"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_num_month"
+                    app:layout_constraintStart_toEndOf="@id/tv_num_month"
+                    app:layout_constraintTop_toTopOf="@id/tv_num_month" />
+
+                <TextView
+                    android:id="@+id/tv_num_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/shape_basic_fill_10_rectangle"
+                    android:backgroundTint="@color/hous_yellow_bg"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="7dp"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toEndOf="@id/tv_month"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="18" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/home_event_date"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_num_year"
+                    app:layout_constraintStart_toEndOf="@id/tv_num_date"
+                    app:layout_constraintTop_toTopOf="@id/tv_num_year" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/tv_month"
+                android:id="@+id/tv_participant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:text="@string/home_event_month"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/home_event_participant"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@id/tv_num_month"
-                app:layout_constraintStart_toEndOf="@id/tv_num_month"
-                app:layout_constraintTop_toTopOf="@id/tv_num_month" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_dates" />
 
-            <TextView
-                android:id="@+id/tv_num_date"
-                android:layout_width="wrap_content"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_participant"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/shape_basic_fill_10_rectangle"
-                android:backgroundTint="@color/hous_yellow_bg"
-                android:paddingHorizontal="14dp"
-                android:paddingVertical="7dp"
-                android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@id/tv_month"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="18" />
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/btn_delete"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_participant"
+                app:layout_constraintTop_toBottomOf="@id/tv_participant"
+                tools:listitem="@layout/item_home_event_participant" />
 
-            <TextView
-                android:id="@+id/tv_date"
-                android:layout_width="wrap_content"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_delete"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:text="@string/home_event_date"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape_red_line_10_rectangle"
+                android:text="@string/home_event_delete"
+                android:textColor="@color/hous_red"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@id/tv_num_year"
-                app:layout_constraintStart_toEndOf="@id/tv_num_date"
-                app:layout_constraintTop_toTopOf="@id/tv_num_year" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_save"
+                app:layout_constraintStart_toStartOf="@id/rv_participant" />
 
-
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_save"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/shape_yellow_fill_10_rectangle"
+                android:text="@string/home_event_save"
+                android:textColor="@color/hous_white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/btn_delete"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_delete"
+                app:layout_constraintTop_toTopOf="@id/btn_delete" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <TextView
-            android:id="@+id/tv_participant"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/home_event_participant"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cl_dates" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_participant"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toTopOf="@id/btn_delete"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/tv_participant"
-            app:layout_constraintTop_toBottomOf="@id/tv_participant"
-            tools:listitem="@layout/item_home_event_participant" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_delete"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="14dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/shape_red_line_10_rectangle"
-            android:text="@string/home_event_delete"
-            android:textColor="@color/hous_red"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btn_save"
-            app:layout_constraintStart_toStartOf="@id/rv_participant" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_save"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:background="@drawable/shape_yellow_fill_10_rectangle"
-            android:text="@string/home_event_save"
-            android:textColor="@color/hous_white"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@id/btn_delete"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/btn_delete"
-            app:layout_constraintTop_toTopOf="@id/btn_delete" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</com.google.android.material.card.MaterialCardView>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

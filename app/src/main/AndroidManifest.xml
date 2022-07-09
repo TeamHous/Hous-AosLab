@@ -23,6 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.hous.housaoslab.ui.home.event.ExampleActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
