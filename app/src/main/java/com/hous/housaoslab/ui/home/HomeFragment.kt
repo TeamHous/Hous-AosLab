@@ -7,16 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.hous.housaoslab.R
 import com.hous.housaoslab.databinding.FragmentHomeBinding
-import com.hous.housaoslab.ui.home.model.ComingUpAdapter
-import com.hous.housaoslab.ui.home.model.ComingUpData
-import com.hous.housaoslab.ui.home.model.RulesAdapter
-import com.hous.housaoslab.ui.home.model.RulesData
+import com.hous.housaoslab.ui.home.model.*
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     val binding get() = _binding!!
     private lateinit var comingUpAdapter: ComingUpAdapter
     private lateinit var rulesAdapter: RulesAdapter
+    private lateinit var toDoAdapter: ToDoAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
@@ -32,7 +30,6 @@ class HomeFragment : Fragment() {
     private fun initAdapter() {
         comingUpAdapter = ComingUpAdapter()
         binding.rvHomeComingUp.adapter = comingUpAdapter
-
         comingUpAdapter.comingUpList.addAll(
             listOf(
                 ComingUpData(R.drawable.shape_yellow_bg_fill_16_rectangle, R.drawable.img_coming_up_plus, "D-1"),
@@ -50,7 +47,6 @@ class HomeFragment : Fragment() {
 
         rulesAdapter = RulesAdapter()
         binding.rvHomeRules.adapter = rulesAdapter
-
         rulesAdapter.rulesList.addAll(
             listOf(
                 RulesData("00시~ 불 끄기!"),
@@ -58,6 +54,19 @@ class HomeFragment : Fragment() {
                 RulesData("세탁기는 화,수,토"),
                 RulesData("일 - 청소하는 날!"),
                 RulesData("2,4주 토- 장보기"),
+            )
+        )
+        comingUpAdapter.notifyDataSetChanged()
+
+        toDoAdapter = ToDoAdapter()
+        binding.rvHomeToDo.adapter = toDoAdapter
+        toDoAdapter.toDoList.addAll(
+            listOf(
+                ToDoData("퇴근하고 마트"),
+                ToDoData("저녁 설거지"),
+                ToDoData("아침 설거지"),
+                ToDoData("물 사기"),
+                ToDoData("야식 먹지 말자"),
             )
         )
         comingUpAdapter.notifyDataSetChanged()

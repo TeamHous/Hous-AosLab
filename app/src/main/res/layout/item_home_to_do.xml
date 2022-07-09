@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="todoData"
+            type="com.hous.housaoslab.ui.home.model.ToDoData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="9dp">
+
+        <CheckBox
+            android:id="@+id/cb_home_to_do"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/sel_home_to_do_check_box"
+            android:button="@android:color/transparent"
+            android:checked="false"
+            app:layout_constraintBottom_toBottomOf="@id/tv_home_to_do"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_home_to_do" />
+
+        <TextView
+            android:id="@+id/tv_home_to_do"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/cb_home_to_do"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="청소기 돌리기" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
